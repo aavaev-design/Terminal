@@ -565,43 +565,6 @@ function PropMesh({ prop }: { prop: TerminalProp }) {
         </group>
       )}
 
-      {prop.type === 'reachstacker' && (
-        <group>
-          {/* Heavy Yellow Chassis (matching screenshot #4) */}
-          <mesh position={[0, 1.2, 0]} castShadow>
-            <boxGeometry args={[5.2, 1.8, 2.8]} />
-            <meshStandardMaterial color="#eab308" roughness={0.5} />
-            <Edges color="#0f172a" />
-          </mesh>
-          {/* Operator Cab */}
-          <mesh position={[0.4, 2.5, 0]} castShadow>
-            <boxGeometry args={[2.1, 1.3, 2.2]} />
-            <meshStandardMaterial color="#1e293b" roughness={0.3} />
-          </mesh>
-          {/* Telescopic Boom */}
-          <mesh position={[1.4, 3.1, 0]} rotation={[0, 0, 0.35]} castShadow>
-            <boxGeometry args={[5.5, 0.65, 0.8]} />
-            <meshStandardMaterial color="#ca8a04" roughness={0.5} />
-          </mesh>
-          {/* 4 Heavy Tires */}
-          {[
-            [-1.7, 0.65, -1.45],
-            [-1.7, 0.65, 1.45],
-            [1.7, 0.65, -1.45],
-            [1.7, 0.65, 1.45],
-          ].map(([wx, wy, wz], idx) => (
-            <mesh
-              key={idx}
-              position={[wx, wy, wz]}
-              rotation={[Math.PI / 2, 0, 0]}
-            >
-              <cylinderGeometry args={[0.65, 0.65, 0.5, 12]} />
-              <meshStandardMaterial color="#0f172a" roughness={0.9} />
-            </mesh>
-          ))}
-        </group>
-      )}
-
       {prop.badgeLabel && (
         <FloatingBadge
           number={prop.badgeNumber}
