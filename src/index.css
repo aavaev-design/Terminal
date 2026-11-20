@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.25);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.6);
+}
+
+/* ============================================================================
+   GRAY COLOR SCHEME OVERRIDES (.theme-gray)
+   Industrial Neutral Slate / Concrete Gray Palette
+   ============================================================================ */
+.theme-gray .bg-\[\#11192c\]\/95,
+.theme-gray .bg-\[\#11192c\]\/90,
+.theme-gray .bg-\[\#11192c\]\/85,
+.theme-gray .bg-\[\#11192c\] {
+  background-color: rgba(43, 48, 58, 0.95) !important;
+}
+
+.theme-gray .bg-\[\#0e1526\],
+.theme-gray .bg-\[\#0f172a\]\/95 {
+  background-color: rgba(35, 39, 47, 0.96) !important;
+}
+
+.theme-gray .bg-slate-900,
+.theme-gray .bg-slate-900\/90,
+.theme-gray .bg-slate-900\/80,
+.theme-gray .bg-slate-900\/70,
+.theme-gray .bg-slate-900\/60,
+.theme-gray .bg-slate-900\/50,
+.theme-gray .bg-slate-900\/30 {
+  background-color: rgba(53, 59, 71, 0.85) !important;
+}
+
+.theme-gray .bg-slate-800,
+.theme-gray .bg-slate-800\/90,
+.theme-gray .bg-slate-800\/80 {
+  background-color: rgba(68, 75, 89, 0.9) !important;
+}
+
+.theme-gray .border-slate-800,
+.theme-gray .border-slate-800\/80,
+.theme-gray .border-slate-800\/90,
+.theme-gray .border-slate-700,
+.theme-gray .border-slate-700\/70,
+.theme-gray .border-slate-700\/80 {
+  border-color: rgba(100, 110, 128, 0.45) !important;
+}
+
+/* ============================================================================
+   WHITE COLOR SCHEME OVERRIDES (.theme-white)
+   Clean Light Architectural Palette
+   ============================================================================ */
+.theme-white .bg-\[\#11192c\]\/95,
+.theme-white .bg-\[\#11192c\]\/90,
+.theme-white .bg-\[\#11192c\]\/85,
+.theme-white .bg-\[\#11192c\],
+.theme-white .bg-\[\#0f172a\]\/95 {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.12), 0 2px 6px -1px rgba(15, 23, 42, 0.06) !important;
+}
+
+.theme-white .bg-\[\#0e1526\] {
+  background-color: #f1f5f9 !important;
+}
+
+.theme-white .bg-slate-900,
+.theme-white .bg-slate-900\/90,
+.theme-white .bg-slate-900\/80,
+.theme-white .bg-slate-900\/70,
+.theme-white .bg-slate-900\/60,
+.theme-white .bg-slate-900\/50,
+.theme-white .bg-slate-900\/30 {
+  background-color: #f8fafc !important;
+}
+
+.theme-white .bg-slate-800,
+.theme-white .bg-slate-800\/90,
+.theme-white .bg-slate-800\/80 {
+  background-color: #e2e8f0 !important;
+}
+
+.theme-white .hover\:bg-slate-800:hover,
+.theme-white .hover\:bg-slate-800\/80:hover,
+.theme-white .hover\:bg-slate-800\/70:hover,
+.theme-white .hover\:bg-slate-800\/50:hover {
+  background-color: #e2e8f0 !important;
+}
+
+.theme-white .border-slate-800,
+.theme-white .border-slate-800\/80,
+.theme-white .border-slate-800\/90,
+.theme-white .border-slate-700,
+.theme-white .border-slate-700\/60,
+.theme-white .border-slate-700\/70,
+.theme-white .border-slate-700\/80,
+.theme-white .border-slate-700\/90 {
+  border-color: #cbd5e1 !important;
+}
+
+.theme-white .divide-slate-800\/60 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #e2e8f0 !important;
+}
+
+.theme-white .text-white,
+.theme-white .text-slate-100,
+.theme-white .text-slate-200 {
+  color: #0f172a !important;
+}
+
+.theme-white .text-slate-300 {
+  color: #334155 !important;
+}
+
+.theme-white .text-slate-400 {
+  color: #475569 !important;
+}
+
+.theme-white .text-sky-400,
+.theme-white .text-sky-300 {
+  color: #0284c7 !important;
+}
+
+.theme-white .text-emerald-400,
+.theme-white .text-emerald-300 {
+  color: #059669 !important;
+}
+
+.theme-white .text-amber-300,
+.theme-white .text-amber-200 {
+  color: #b45309 !important;
+}
+
+.theme-white .bg-sky-950\/60 {
+  background-color: #e0f2fe !important;
+  border-color: #7dd3fc !important;
+}
+
+/* Keep white text on solid colored action buttons in White theme */
+.theme-white .bg-emerald-600,
+.theme-white .bg-emerald-600\/90,
+.theme-white .bg-sky-600,
+.theme-white .bg-sky-600\/90,
+.theme-white .bg-indigo-600,
+.theme-white .bg-rose-600 {
+  color: #ffffff !important;
+}
